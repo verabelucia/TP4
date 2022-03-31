@@ -1,4 +1,4 @@
-package negocio;
+package modelo;
 
 public class Calca extends Produto{
 	private String modeloCalca;

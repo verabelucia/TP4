@@ -1,4 +1,4 @@
-package negocio;
+package modelo;
 
 import java.awt.Image;
 import java.util.Date;

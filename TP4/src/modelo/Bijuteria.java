@@ -1,4 +1,4 @@
-package negocio;
+package modelo;
 
 public class Bijuteria extends Produto{
 	private String modeloBijuteria;

@@ -1,4 +1,4 @@
-package negocio;
+package modelo;
 
 public class Carrinho {
 	private double frete = 30.0; //frete fixo
