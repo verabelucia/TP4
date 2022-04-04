@@ -2,6 +2,7 @@ package controle;
 
 import modelo.*;
 
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -18,7 +19,10 @@ public class ControleDados {
 		// USUARIO ------------------
 	public boolean inserirEditarUsuario(String[] dadosUsuario) {
 		 //0 - idUsuario; 1 - nome;2 - cpf; 3 - telefone; 4 - pagamento; 5 - endereco;
-	        Usuario p = new Usuario(Integer.parseInt(dadosUsuario[0]), dadosUsuario[1],Integer.parseInt(dadosUsuario[2]), null, null, null);
+	        Usuario p = new Usuario(Integer.parseInt(dadosUsuario[0]), dadosUsuario[1],Integer.parseInt(dadosUsuario[2]), 
+	        		null, //telefone
+	        		null, //pagamento
+	        		null); //endereço
 	        d.inserirEditarUsuario(p, Integer.parseInt(dadosUsuario[0]));
 	        return true;
 	    } 
@@ -51,8 +55,16 @@ public class ControleDados {
 	
 		// BLUSA ---------------------
 	public boolean inserirEditarBlusa(String[] dadosBlusa) {
-		 //0 - idProduto; 1 - nome; 2 - marca; 3 - preco; 4 - departamento; 5 - descricao; 6 - cor; 7 - tamanho; 8 - modelo blusa; 9 - usuario
-	        Blusa p = new Blusa(Integer.parseInt(dadosBlusa[0]), dadosBlusa[1], dadosBlusa[2], Float.parseFloat(dadosBlusa[3]), dadosBlusa[4], dadosBlusa[5], dadosBlusa[6], dadosBlusa[7], dadosBlusa[8],null);
+	        Blusa p = new Blusa(Integer.parseInt(dadosBlusa[0]), //ID
+	        					dadosBlusa[1], //nome
+	        					dadosBlusa[2], //marca
+	        					Float.parseFloat(dadosBlusa[3]), //preco
+	        					dadosBlusa[4], //departamento
+	        					dadosBlusa[5], //descricao
+	        					dadosBlusa[6], //cor
+	        					dadosBlusa[7], //tamanho
+	        					dadosBlusa[8], //modeloblusa
+	        					null); //usuario(vendedor)
 	        d.inserirEditarBlusa(p, Integer.parseInt(dadosBlusa[0]));
 	        return true; 
 	    }
@@ -80,7 +92,6 @@ public class ControleDados {
 		}
 			
 	}
-	
 	
 		// CALCAS -------------
 	public boolean inserirEditarCalca(String[] dadosCalca) {
@@ -113,7 +124,6 @@ public class ControleDados {
 			
 	}
 	
-	
 		// BIJUS --------------
 	public boolean inserirEditarBijus(String[] dadosBijus) {
 	        Bijuteria p = new Bijuteria(Integer.parseInt(dadosBijus[0]), dadosBijus[1], dadosBijus[2], Float.parseFloat(dadosBijus[3]), dadosBijus[4], dadosBijus[5], dadosBijus[6], dadosBijus[7], dadosBijus[8],null);
@@ -145,19 +155,25 @@ public class ControleDados {
 	}
 	 
 	
-	 //------------------- PROBLEMAS DE CÓDIGO EM RELAÇÃO AO DA PROFESSORA -------------------
+	 //------------------- PROBLEMAS DE CÓDIGO -------------------
 	 
 	
 	public boolean inserirEditarCarrinho(String[] dadosCarrinho) {
-		 //0 - frete(30.0); 1 - valorTotalProdutos
-	        Carrinho p = new Carrinho(null,null,null);
+	        
+		Carrinho p = new Carrinho(null, //blusa
+	        						  null, //calça
+	        						  null); //bijuteria
 	        d.inserirEditarCarrinho(p, 0);
 	        return true; 
 	    }
 	 
 	 public boolean inserirEditarCompra(String[] dadosCompra) {
-		 //0 - dataCompra; 1 - statusCompra; 2 - numeroPedido; 3 - usuario; 4 - carrinho;
-	        Compra p = new Compra(null, dadosCompra[1],Integer.parseInt(dadosCompra[2]),null,null);
+		 Date h = Calendar.getInstance().getTime();   //-> USAR POSTERIORMENTE 
+		 Compra p = new Compra(h, //dataCompra
+	        				   dadosCompra[1], //statusCompra
+	        				   Integer.parseInt(dadosCompra[2]), //numeroPedido
+	        				   null, //usuario
+	        				   null); //carrinho
 	        d.inserirEditarCompra(p, Integer.parseInt(dadosCompra[2]));
 	        return true; 
 	    }

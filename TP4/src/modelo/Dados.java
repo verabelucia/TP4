@@ -68,7 +68,7 @@ public class Dados {
 	//Dados aleatórios
 	
 //		public void fillWithSomeData() {
-//			Date d = Calendar.getInstance().getTime();   //-> USAR POSTERIORMENTE
+//			Date hoje = Calendar.getInstance().getTime();   //-> USAR POSTERIORMENTE
 			
 //			for(int i = 0; i < 2; i++) {
 //				//(int ddd, int numero)
@@ -109,6 +109,7 @@ public class Dados {
 			
 			Date d = Calendar.getInstance().getTime();
 			
+			//usuarios[0] = (new Usuario(1, "Nome"+1,111,new Telefone(11, 91111),new Pagamento(511, 111, 3011),new Endereco(711, 1,"Rua"+1, "Complemento"+1)));
 			usuarios[0] = (new Usuario(1, "Nome"+1,111,null,null,null));
 			usuarios[1] = (new Usuario(2, "Nome"+2,222,null,null,null));
 			
@@ -123,6 +124,9 @@ public class Dados {
 	        
 	        compras[0] = (new Compra(d, "Status"+0, 0, null, null));
 	        compras[1] = (new Compra(d, "Status"+1, 1, null, null));
+	        
+	        carrs[0]= (new Carrinho(null,null,null));
+	        carrs[1]= (new Carrinho(null,null,null));
 
 	        qtdBijus = 2;
 	        qtdUsuarios = 2;

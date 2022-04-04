@@ -112,7 +112,9 @@ public class TelaBlusa implements ActionListener, ListSelectionListener{
 			
 			if(!pesquisa)
 				mensagemErroBusca();
+			
 		}
+		
 	}
 	
 

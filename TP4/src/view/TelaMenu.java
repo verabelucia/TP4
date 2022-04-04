@@ -14,6 +14,7 @@ public class TelaMenu implements ActionListener {
 	private static JButton calca = new JButton("Calça");
 	private static JButton usuario = new JButton("Usuário");
 	private static JButton carrinho = new JButton("Carrinho");
+	private static JButton compra = new JButton("Compra");
 	public static ControleDados dados = new ControleDados();
 	
 	public TelaMenu() {
@@ -24,6 +25,7 @@ public class TelaMenu implements ActionListener {
 		calca.setBounds(70, 170, 100, 30);
 		usuario.setBounds(195, 70, 100, 30);
 		carrinho.setBounds(195, 120, 100, 30);
+		compra.setBounds(195, 170, 100, 30);
 		
 		janela.setLayout(null);
 		
@@ -33,6 +35,7 @@ public class TelaMenu implements ActionListener {
 		janela.add(calca);
 		janela.add(usuario);
 		janela.add(carrinho);
+		janela.add(compra);
 		
 		janela.setSize(400, 300);
 		janela.setLocationRelativeTo(null);
@@ -48,6 +51,7 @@ public class TelaMenu implements ActionListener {
 		calca.addActionListener(menu);
 		usuario.addActionListener(menu);
 		carrinho.addActionListener(menu);
+		compra.addActionListener(menu);
 	}
 	
 
@@ -70,6 +74,10 @@ public class TelaMenu implements ActionListener {
 
 		if (src == carrinho)
 			new TelaCarrinho().mostrarDados(dados, 5); 
+		
+		if (src == compra)
+			new TelaCompra().mostrarDados(dados, 6); 
+		
 	
 	}
 }

@@ -16,15 +16,15 @@ import javax.swing.event.ListSelectionListener;
 
 import controle.*;
 
-public class TelaCarrinho //implements ActionListener, ListSelectionListener 
+public class TelaCompra //implements ActionListener, ListSelectionListener 
 {
 	
 	private JFrame janela;
 	private JLabel titulo;
-	private JButton atualizar;
-	private JButton compra;
-	//private JButton busca;
-	//private JTextField nomeBusca;
+	//private JButton atualizar;
+	//private JButton compra;
+	private JButton busca;
+	private JTextField numeroBusca;
 	private static ControleDados dados;
 //	private JList<String> listaBlusaCadastradas;
 //	private String[] listaCodigos = new String[10];
@@ -32,14 +32,15 @@ public class TelaCarrinho //implements ActionListener, ListSelectionListener
 	public void mostrarDados(ControleDados d, int op) {
 		dados = d;
 		
-		if(op == 5) {
+		if(op == 6) {
 			//listaCodigos = new ControleCarrinho(dados).getNome();
 			//listaBlusaCadastradas = new JList<String>(listaCodigos);
-			janela = new JFrame("Carrinho");
-			titulo = new JLabel("Itens carrinho");
+			janela = new JFrame("Compras");
+			titulo = new JLabel("Consultar compras");
 			
-			atualizar = new JButton("Atualizar");
-			compra = new JButton("Comprar");
+			numeroBusca = new JTextField();
+			busca = new JButton("Atualizar");
+			//compra = new JButton("Comprar");
 
 			
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
@@ -48,16 +49,16 @@ public class TelaCarrinho //implements ActionListener, ListSelectionListener
 			//listaBlusaCadastradas.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 			//listaBlusaCadastradas.setVisibleRowCount(10);
 
-			atualizar.setBounds(70, 190, 100, 30);
-			compra.setBounds(200, 190, 100, 30);
+			numeroBusca.setBounds(20, 240, 230, 30);
+			busca.setBounds(270, 240, 100, 30);
 			
 			
 			janela.setLayout(null);
 
 			janela.add(titulo);
 			//janela.add(listaBlusaCadastradas);
-			janela.add(atualizar);
-			janela.add(compra);
+			janela.add(numeroBusca);
+			janela.add(busca);
 			//janela.add(nomeBusca);
 			//janela.add(busca);
 			
