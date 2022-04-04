@@ -1,6 +1,5 @@
 package modelo;
 
-
 import java.util.Date;
 public class Teste {
 	
@@ -17,6 +16,12 @@ public class Teste {
 		Pagamento p2 = new Pagamento(5033,241,1922);
 		Telefone t2 = new Telefone(61,988);
 		Usuario u2 = new Usuario(2,"Vera",0531,t2,p2,e2);
+		
+//		Dados aleatprios
+//		Dados d1 = new Dados();
+//		
+//		d1.fillWithSomeData();
+		
 		
 		System.out.println(u1.toString()+"\n");
 		//System.out.println(u1.toStringID()+"\n"); //mostrar o idVendedor
@@ -59,11 +64,14 @@ public class Teste {
 		//System.out.println(cr1.valorProdutos()+"\n");
 		System.out.println(cr1.toString()+"\n");
 		
-		Compra compra1 = new Compra (23, "Esperando pagamento", 001, u2, cr1);
+		Compra compra1 = new Compra (null, "Esperando pagamento", 001, u2, cr1);
 		System.out.println(compra1.toString()+"\n");
+		
+		//System.out.println(d1.getUsuarios());
 		
 	//REALIZANDO COMPRA
 	}
+
 
 	
 

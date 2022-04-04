@@ -13,9 +13,10 @@ public class Blusa extends Produto{
 		this.descricao = descricao;
 		this.cor = cor;
 		this.tamanho = tamanho;
-		this.usuario = usuario;
 		
 		this.modeloBlusa = modeloBlusa;
+		
+		this.usuario = usuario;
 		//protected Image fotoProduto[];
 	}
 	

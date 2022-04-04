@@ -1,6 +1,6 @@
 package modelo;
 
-import java.awt.Image;
+//import java.awt.Image;
 
 public abstract class Produto {
 	protected String nome;

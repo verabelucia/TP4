@@ -1,10 +1,11 @@
 package modelo;
+import java.util.Calendar;
 import java.util.Date;
 
 
 
 public class Compra {
-	private int dataCompra; //Mudar para Date depois
+	private Date dataCompra;
 	private String statusCompra;
 	private int numeroPedido;
 	
@@ -13,7 +14,7 @@ public class Compra {
 
 	
 
-	public Compra(int dataCompra, String statusCompra, int numeroPedido,Usuario usuario, Carrinho carrinho) {
+	public Compra(Date dataCompra, String statusCompra, int numeroPedido,Usuario usuario, Carrinho carrinho) {
 		this.dataCompra = dataCompra;
 		this.statusCompra = statusCompra;
 		this.numeroPedido = numeroPedido;
@@ -23,6 +24,7 @@ public class Compra {
 	}
 	
 	public String toString() {
+		Date dataCompra = Calendar.getInstance().getTime();
 		return 	" ------------ Compra ------------------" +
 				"\nNúmero Pedido: " + numeroPedido + 
 				"\n\nData da Compra: " + dataCompra +
@@ -50,11 +52,11 @@ public class Compra {
 
 	
 	// -------------------gets e sets -----------------------
-	public int getDataCompra() {
+	public Date getDataCompra() {
 		return dataCompra;
 	}
 	
-	public void setDataCompra(int dataCompra) {
+	public void setDataCompra(Date dataCompra) {
 		this.dataCompra = dataCompra;
 	}
 	
