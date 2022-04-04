@@ -165,13 +165,57 @@ public class ControleDados {
 	
 	//-------------Gets e sets----------------
 	
-		public Dados getD() {
+		public Dados getDados() {
 			return d;
 		}
 
-		public void setD(Dados d) {
+		public void setDados(Dados d) {
 			this.d = d;
 		}
+		
+		public Usuario[] getUsuarios() {
+			return this.d.getUsuarios();
+		}
+		public int getQtdUsuarios() {
+			return this.d.getQtdUsuarios();
+		}
+		
+		public Blusa[] getBlusas() {
+			return this.d.getBlusas();
+		}
+		public int getQtdBlusas() {
+			return this.d.getQtdBlusas();
+		}
+		
+		public Bijuteria[] getBijus() {
+			return this.d.getBijus();
+		}
+		public int getQtdBijus() {
+			return this.d.getQtdBijus();
+		}
+		
+		public Calca[] getCalcas() {
+			return this.d.getCalcas();
+		}
+		public int getQtdCalcas() {
+			return this.d.getQtdCalcas();
+		}
+		
+		public Carrinho[] getCarrs() {
+			return this.d.getCarrs();
+		}
+		public int getQtdCarrs() {
+			return this.d.getQtdCarrs();
+		}
+		
+		public Compra[] getCompras() {
+			return this.d.getCompras();
+		}
+		public int getQtdCompras() {
+			return this.d.getQtdCompras();
+		}
+		
+		
 		 
 	
 	

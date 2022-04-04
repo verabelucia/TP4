@@ -4,26 +4,60 @@ import modelo.*;
 
 public class ControleUsuarios {
 	// implementar método para lidar com usuarios (incluindo pagamento, endereço e telefone)
-//	private Usuario[] a;
-//	private int qtdUsuarios;
-//	
-//	
-//	// TERMINAR DE AJEITAR
-//	public ControleAluno(ControleDados d) {
-//		a = d.getAlunos();
-//		qtdAlunos = d.getQtdAlunos();
-//		
-//	}
-//	
-//	public String[] getNomeAluno() {
-//		String[] s = new String[qtdAlunos];
-//		for(int i = 0; i < qtdAlunos; i++) {
-//			s[i] = a[i].getNome();
-//		}
-//		
-//		return s;
-//	}
+	private Usuario[] user;
+	private int qtdUsuarios;
 	
+	
+	public ControleUsuarios(ControleDados d) {
+		user = d.getUsuarios();
+		qtdUsuarios = d.getQtdUsuarios();
+		
+	}
+	
+	public String[] getNome() {
+		String[] q = new String[qtdUsuarios];
+		for(int i = 0; i < qtdUsuarios; i++) {
+			q[i] = user[i].getNome();
+		}
+		
+		return q;
+	}
 
+	
+	//-------------Gets e sets----------------
+	
+	public int getQtd() {
+		return qtdUsuarios;
+	}
+	
+	public void setQtdUsuarios(int qtdUsuarios) {
+		this.qtdUsuarios = qtdUsuarios;
+	}
+
+	public void setQtd(int qtd) {
+		this.qtdUsuarios = qtd;
+	}
+	
+	public int getIdUsuario(int i) {
+		return user[i].getIdUsuario();
+	}
+	
+	public String getNome(int i) {
+		return user[i].getNome();
+	}
+
+	public Telefone getTelefone(int i) {
+		return user[i].getTelefone();
+	}
+
+	public Pagamento getPagamento(int i) {
+		return user[i].getPagamento();
+	}
+	
+	public Endereco getEndereco(int i) {
+		return user[i].getEndereco();
+	}
+	
+	
 
 }

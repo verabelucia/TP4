@@ -60,12 +60,12 @@ public class Bijuteria extends Produto{
 	
 	//---------------gets e sets---------------------
 	
-	public String getModeloCalca() {
+	public String getModeloBiju() {
 		return modeloBijuteria;
 	}
 
-	public void setModeloCalca(String modeloCalca) {
-		this.modeloBijuteria = modeloCalca;
+	public void setModeloBiju(String modeloBijuteria) {
+		this.modeloBijuteria = modeloBijuteria;
 	}
 	
 	
