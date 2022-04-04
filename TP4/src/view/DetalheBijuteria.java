@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 import controle.ControleDados;
 
 
-public class DetalheBlusa implements ActionListener {
+public class DetalheBijuteria implements ActionListener {
 	
 	private JFrame janela;
 	private JLabel labelID = new JLabel("ID: ");
@@ -31,7 +31,7 @@ public class DetalheBlusa implements ActionListener {
 	private JTextField valorCor;
 	private JLabel labelTamanho = new JLabel("Tamanho: ");
 	private JTextField valorTamanho;
-	private JLabel labelModelo = new JLabel("Modelo blusa: ");
+	private JLabel labelModelo = new JLabel("Modelo Bijuteria: ");
 	private JTextField valorModelo;
 	
 	
@@ -44,30 +44,30 @@ public class DetalheBlusa implements ActionListener {
 	private String s;
 	
 	
-	public void inserirEditar(int op, ControleDados d, TelaBlusa p, int pos) {
+	public void inserirEditar(int op, ControleDados d, TelaBijuteria p, int pos) {
 		opcao = op;
 		posicao = pos;
 		dados = d;
 		
 		//Nome na aba
 		if (op == 1)
-			s = "Cadastro Blusa";
+			s = "Cadastro Bijuteria";
 		if (op == 2)
-			s = "Detalhe Blusa";
+			s = "Detalhe Bijuteria";
 		
 		janela = new JFrame(s);
 		
 		// Mostrar dados cadastrados
 		if(op == 2) { 
-			valorID = new JTextField(String.valueOf(dados.getBlusas()[pos].getIdProduto()), 200);
-			valorNome = new JTextField(dados.getBlusas()[pos].getNome(), 200);
-			valorMarca = new JTextField(dados.getBlusas()[pos].getMarca(), 200);
-			valorPreco = new JTextField(String.valueOf(dados.getBlusas()[pos].getPreco()), 200);
-			valorDepartamento = new JTextField(dados.getBlusas()[pos].getDepartamento(), 200);
-			valorDescricao = new JTextField(dados.getBlusas()[pos].getDescricao(), 200);
-			valorCor = new JTextField(dados.getBlusas()[pos].getCor(), 200);
-			valorTamanho = new JTextField(String.valueOf(dados.getBlusas()[pos].getTamanho()), 200);
-			valorModelo = new JTextField(dados.getBlusas()[pos].getModeloBlusa(), 200);
+			valorID = new JTextField(String.valueOf(dados.getBijus()[pos].getIdProduto()), 200);
+			valorNome = new JTextField(dados.getBijus()[pos].getNome(), 200);
+			valorMarca = new JTextField(dados.getBijus()[pos].getMarca(), 200);
+			valorPreco = new JTextField(String.valueOf(dados.getBijus()[pos].getPreco()), 200);
+			valorDepartamento = new JTextField(dados.getBijus()[pos].getDepartamento(), 200);
+			valorDescricao = new JTextField(dados.getBijus()[pos].getDescricao(), 200);
+			valorCor = new JTextField(dados.getBijus()[pos].getCor(), 200);
+			valorTamanho = new JTextField(String.valueOf(dados.getBijus()[pos].getTamanho()), 200);
+			valorModelo = new JTextField(dados.getBijus()[pos].getModeloBiju(), 200);
 			
 			
 		// Inserir dados
@@ -128,6 +128,7 @@ public class DetalheBlusa implements ActionListener {
 		this.janela.add(valorTamanho);
 		this.janela.add(labelModelo);
 		this.janela.add(valorModelo);
+		
 		this.janela.add(botaoSalvar);
 		
 		
@@ -142,7 +143,7 @@ public class DetalheBlusa implements ActionListener {
 		botaoExcluir.addActionListener(this);		
 	}
 
-	
+	// chama funções lá em controle de dados
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 		if (src == botaoSalvar) {
@@ -162,7 +163,7 @@ public class DetalheBlusa implements ActionListener {
 				novoDado[7] = valorTamanho.getText();
 				novoDado[8] = valorModelo.getText();
 				
-				res = dados.inserirEditarBlusas(novoDado);
+				res = dados.inserirEditarBijus(novoDado); 
 				
 				if (res) {
 					mensagemSucessoCadastro();
@@ -178,7 +179,7 @@ public class DetalheBlusa implements ActionListener {
 		if (src == botaoExcluir) {
 			boolean res = false;
 			if (opcao == 2) {
-				res = dados.removerBlusa(posicao);
+				res = dados.removerBijus(posicao); 
 				if (res)
 					mensagemSucessoExclusao();
 				else

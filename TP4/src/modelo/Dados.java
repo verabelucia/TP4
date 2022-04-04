@@ -118,12 +118,13 @@ public class Dados {
 	        blusas[0] = (new Blusa(0, "Blusa"+0,"Marca"+0, 0,"Departamento"+0, "Descrição"+0, "Cor"+0,"Tamanho"+0, "Modelo Calça"+0,null ));
 	        blusas[1] = (new Blusa(1, "Blusa"+1,"Marca"+1, 0,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Calça"+1,null ));
 
-	        bijus[0] = (new Bijuteria(0, "Biju"+0,"Marca"+0, 0,"Departamento"+0, "Descrição"+0, "Cor"+0,"Tamanho"+0, "Modelo Calça"+0,null ));
-	        bijus[1] = (new Bijuteria(1, "Biju"+1,"Marca"+1, 0,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Calça"+1,null ));
+	        bijus[0] = (new Bijuteria(0, "Biju"+0,"Marca"+0, 0,"Departamento"+0, "Descrição"+0, "Cor"+0,"Tamanho"+0, "Modelo Bijuteria"+0,null ));
+	        bijus[1] = (new Bijuteria(1, "Biju"+1,"Marca"+1, 0,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Bijuteria"+1,null ));
 	        
 	        compras[0] = (new Compra(d, "Status"+0, 0, null, null));
 	        compras[1] = (new Compra(d, "Status"+1, 1, null, null));
 
+	        qtdBijus = 2;
 	        qtdUsuarios = 2;
 	        qtdCalcas = 2;
 	        qtdBlusas = 2;

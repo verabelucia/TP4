@@ -35,8 +35,8 @@ public class TelaBlusa implements ActionListener, ListSelectionListener{
 		if(op == 1) {
 			listaCodigos = new ControleBlusas(dados).getNome();
 			listaBlusaCadastradas = new JList<String>(listaCodigos);
-			janela = new JFrame("Hidratante");
-			titulo = new JLabel("Hidratante cadastrados");
+			janela = new JFrame("Blusas");
+			titulo = new JLabel("Blusas Cadastradas");
 			
 			cadastro = new JButton("Cadastrar");
 			atualiza = new JButton("Atualizar");
