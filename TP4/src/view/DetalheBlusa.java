@@ -162,7 +162,7 @@ public class DetalheBlusa implements ActionListener {
 				novoDado[7] = valorTamanho.getText();
 				novoDado[8] = valorModelo.getText();
 				
-				res = dados.inserirEditarBlusas(novoDado);
+				res = dados.inserirEditarBlusa(novoDado);
 				
 				if (res) {
 					mensagemSucessoCadastro();

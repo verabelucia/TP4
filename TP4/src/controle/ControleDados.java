@@ -16,10 +16,10 @@ public class ControleDados {
 	//------------Métodos----------------------
 	
 		// USUARIO ------------------
-	public boolean inserirEditarUsuarios(String[] dadosUsuario) {
+	public boolean inserirEditarUsuario(String[] dadosUsuario) {
 		 //0 - idUsuario; 1 - nome;2 - cpf; 3 - telefone; 4 - pagamento; 5 - endereco;
 	        Usuario p = new Usuario(Integer.parseInt(dadosUsuario[0]), dadosUsuario[1],Integer.parseInt(dadosUsuario[2]), null, null, null);
-	        d.inserirEditarUsuarios(p, Integer.parseInt(dadosUsuario[0]));
+	        d.inserirEditarUsuario(p, Integer.parseInt(dadosUsuario[0]));
 	        return true;
 	    } 
 	
@@ -50,10 +50,10 @@ public class ControleDados {
 		
 	
 		// BLUSA ---------------------
-	public boolean inserirEditarBlusas(String[] dadosBlusa) {
+	public boolean inserirEditarBlusa(String[] dadosBlusa) {
 		 //0 - idProduto; 1 - nome; 2 - marca; 3 - preco; 4 - departamento; 5 - descricao; 6 - cor; 7 - tamanho; 8 - modelo blusa; 9 - usuario
 	        Blusa p = new Blusa(Integer.parseInt(dadosBlusa[0]), dadosBlusa[1], dadosBlusa[2], Float.parseFloat(dadosBlusa[3]), dadosBlusa[4], dadosBlusa[5], dadosBlusa[6], dadosBlusa[7], dadosBlusa[8],null);
-	        d.inserirEditarBlusas(p, Integer.parseInt(dadosBlusa[0]));
+	        d.inserirEditarBlusa(p, Integer.parseInt(dadosBlusa[0]));
 	        return true; 
 	    }
 	
@@ -83,9 +83,9 @@ public class ControleDados {
 	
 	
 		// CALCAS -------------
-	public boolean inserirEditarCalcas(String[] dadosCalca) {
+	public boolean inserirEditarCalca(String[] dadosCalca) {
 	        Calca p = new Calca(Integer.parseInt(dadosCalca[0]), dadosCalca[1], dadosCalca[2], Float.parseFloat(dadosCalca[3]), dadosCalca[4], dadosCalca[5], dadosCalca[6], dadosCalca[7], dadosCalca[8],null);
-	        d.inserirEditarCalcas(p, Integer.parseInt(dadosCalca[0]));
+	        d.inserirEditarCalca(p, Integer.parseInt(dadosCalca[0]));
 	        return true; 
 	    }
 	
@@ -117,11 +117,11 @@ public class ControleDados {
 		// BIJUS --------------
 	public boolean inserirEditarBijus(String[] dadosBijus) {
 	        Bijuteria p = new Bijuteria(Integer.parseInt(dadosBijus[0]), dadosBijus[1], dadosBijus[2], Float.parseFloat(dadosBijus[3]), dadosBijus[4], dadosBijus[5], dadosBijus[6], dadosBijus[7], dadosBijus[8],null);
-	        d.inserirEditarBijus(p, Integer.parseInt(dadosBijus[0]));
+	        d.inserirEditarBiju(p, Integer.parseInt(dadosBijus[0]));
 	        return true; 
 	    }
 	
-	public boolean removerBijus(int i) {
+	public boolean removerBiju(int i) {
 		String bijuRemovida = d.getBijus()[i].getNome();
 
 		if (i == (d.getQtdBijus() - 1)) { 

@@ -179,7 +179,7 @@ public class DetalheBijuteria implements ActionListener {
 		if (src == botaoExcluir) {
 			boolean res = false;
 			if (opcao == 2) {
-				res = dados.removerBijus(posicao); 
+				res = dados.removerBiju(posicao); 
 				if (res)
 					mensagemSucessoExclusao();
 				else

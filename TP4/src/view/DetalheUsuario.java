@@ -137,7 +137,7 @@ public class DetalheUsuario implements ActionListener {
 				novoDado[5] = valorEndereco.getText();
 				
 				
-				res = dados.inserirEditarUsuarios(novoDado);
+				res = dados.inserirEditarUsuario(novoDado);
 				
 				if (res) {
 					mensagemSucessoCadastro();

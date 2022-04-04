@@ -162,7 +162,7 @@ public class DetalheCalca implements ActionListener {
 				novoDado[7] = valorTamanho.getText();
 				novoDado[8] = valorModelo.getText();
 				
-				res = dados.inserirEditarCalcas(novoDado);
+				res = dados.inserirEditarCalca(novoDado);
 				
 				if (res) {
 					mensagemSucessoCadastro();

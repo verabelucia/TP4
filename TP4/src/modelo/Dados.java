@@ -27,25 +27,25 @@ public class Dados {
 	
 	//------métodos para inserir e editar------------
 	
-	public void inserirEditarUsuarios(Usuario u, int posicao) {
+	public void inserirEditarUsuario(Usuario u, int posicao) {
 		this.usuarios[posicao] = u;
 		if (posicao == qtdUsuarios)
 			qtdUsuarios++;
 	}
 	
-	public void inserirEditarBlusas(Blusa b, int posicao) {
+	public void inserirEditarBlusa(Blusa b, int posicao) {
 		this.blusas[posicao] = b;
 		if (posicao == qtdBlusas)
 			qtdBlusas++;
 	}
 	
-	public void inserirEditarCalcas(Calca c, int posicao) {
+	public void inserirEditarCalca(Calca c, int posicao) {
 		this.calcas[posicao] = c;
 		if (posicao == qtdCalcas)
 			qtdCalcas++;
 	}
 	
-	public void inserirEditarBijus(Bijuteria b, int posicao) {
+	public void inserirEditarBiju(Bijuteria b, int posicao) {
 		this.bijus[posicao] = b;
 		if (posicao == qtdBijus)
 			qtdBijus++;
@@ -109,17 +109,17 @@ public class Dados {
 			
 			Date d = Calendar.getInstance().getTime();
 			
-			usuarios[0] = (new Usuario(0, "Nome"+0,000,null,null,null));
-			usuarios[1] = (new Usuario(1, "Nome"+1,111,null,null,null));
+			usuarios[0] = (new Usuario(1, "Nome"+1,111,null,null,null));
+			usuarios[1] = (new Usuario(2, "Nome"+2,222,null,null,null));
 			
-	        calcas[0] = (new Calca(0, "Calça"+0,"Marca"+0, 0,"Departamento"+0, "Descrição"+0, "Cor"+0,"Tamanho"+0, "Modelo Blusa"+0,null ));
-	        calcas[1] = (new Calca(1, "Calça"+1,"Marca"+1, 0,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Blusa"+1,null ));
+	        calcas[0] = (new Calca(1, "Calça"+1,"Marca"+1, 1,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Blusa"+1,null ));
+	        calcas[1] = (new Calca(2, "Calça"+1,"Marca"+2, 2,"Departamento"+2, "Descrição"+2, "Cor"+2,"Tamanho"+2, "Modelo Blusa"+2,null ));
 
-	        blusas[0] = (new Blusa(0, "Blusa"+0,"Marca"+0, 0,"Departamento"+0, "Descrição"+0, "Cor"+0,"Tamanho"+0, "Modelo Calça"+0,null ));
-	        blusas[1] = (new Blusa(1, "Blusa"+1,"Marca"+1, 0,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Calça"+1,null ));
+	        blusas[0] = (new Blusa(1, "Blusa"+1,"Marca"+1, 1,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Calça"+1,null ));
+	        blusas[1] = (new Blusa(2, "Blusa"+2,"Marca"+2, 2,"Departamento"+2, "Descrição"+2, "Cor"+2,"Tamanho"+2, "Modelo Calça"+2,null ));
 
-	        bijus[0] = (new Bijuteria(0, "Biju"+0,"Marca"+0, 0,"Departamento"+0, "Descrição"+0, "Cor"+0,"Tamanho"+0, "Modelo Bijuteria"+0,null ));
-	        bijus[1] = (new Bijuteria(1, "Biju"+1,"Marca"+1, 0,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Bijuteria"+1,null ));
+	        bijus[0] = (new Bijuteria(1, "Bijuteria"+1,"Marca"+1, 1,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Bijuteria"+1,null ));
+	        bijus[1] = (new Bijuteria(2, "Bijuteria"+2,"Marca"+2, 2,"Departamento"+2, "Descrição"+2, "Cor"+2,"Tamanho"+2, "Modelo Bijuteria"+2,null ));
 	        
 	        compras[0] = (new Compra(d, "Status"+0, 0, null, null));
 	        compras[1] = (new Compra(d, "Status"+1, 1, null, null));
