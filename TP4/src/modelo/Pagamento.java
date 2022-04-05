@@ -16,9 +16,9 @@ public class Pagamento {
 	
 	@Override
 	public String toString() {
-		return "\n  Número do Cartão - " + numeroCartao +
+		return "\n  Nº Cartão - " + numeroCartao +
 				"\n  cvc - "+ cvc +
-				"\n  Validade - " + validade;
+				"\n  Val. - " + validade;
 	}
 	
 	//----------------- metodos ------------------

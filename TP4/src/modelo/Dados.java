@@ -110,17 +110,17 @@ public class Dados {
 			Date d = Calendar.getInstance().getTime();
 			
 			//usuarios[0] = (new Usuario(1, "Nome"+1,111,new Telefone(11, 91111),new Pagamento(511, 111, 3011),new Endereco(711, 1,"Rua"+1, "Complemento"+1)));
-			usuarios[0] = (new Usuario(1, "Nome"+1,111,null,null,null));
-			usuarios[1] = (new Usuario(2, "Nome"+2,222,null,null,null));
+			usuarios[0] = (new Usuario(1, "Nome"+1,111,new Telefone(11, 91111),new Pagamento(511, 111, 3011),new Endereco(711, 1,"Rua"+1, "Complemento"+1)));
+			usuarios[1] = (new Usuario(2, "Nome"+2,222,new Telefone(22, 92222),new Pagamento(522, 222, 3022),new Endereco(722, 2,"Rua"+2, "Complemento"+2)));
 			
-	        calcas[0] = (new Calca(1, "Calça"+1,"Marca"+1, 1,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Blusa"+1,null ));
-	        calcas[1] = (new Calca(2, "Calça"+1,"Marca"+2, 2,"Departamento"+2, "Descrição"+2, "Cor"+2,"Tamanho"+2, "Modelo Blusa"+2,null ));
+	        calcas[0] = (new Calca(1, "Calça"+1,"Marca"+1, 1,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Blusa"+1,usuarios[0] ));
+	        calcas[1] = (new Calca(2, "Calça"+1,"Marca"+2, 2,"Departamento"+2, "Descrição"+2, "Cor"+2,"Tamanho"+2, "Modelo Blusa"+2,usuarios[0] ));
 
-	        blusas[0] = (new Blusa(1, "Blusa"+1,"Marca"+1, 1,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Calça"+1,null ));
-	        blusas[1] = (new Blusa(2, "Blusa"+2,"Marca"+2, 2,"Departamento"+2, "Descrição"+2, "Cor"+2,"Tamanho"+2, "Modelo Calça"+2,null ));
+	        blusas[0] = (new Blusa(1, "Blusa"+1,"Marca"+1, 1,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Calça"+1,usuarios[0] ));
+	        blusas[1] = (new Blusa(2, "Blusa"+2,"Marca"+2, 2,"Departamento"+2, "Descrição"+2, "Cor"+2,"Tamanho"+2, "Modelo Calça"+2,usuarios[0] ));
 
-	        bijus[0] = (new Bijuteria(1, "Bijuteria"+1,"Marca"+1, 1,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Bijuteria"+1,null ));
-	        bijus[1] = (new Bijuteria(2, "Bijuteria"+2,"Marca"+2, 2,"Departamento"+2, "Descrição"+2, "Cor"+2,"Tamanho"+2, "Modelo Bijuteria"+2,null ));
+	        bijus[0] = (new Bijuteria(1, "Bijuteria"+1,"Marca"+1, 1,"Departamento"+1, "Descrição"+1, "Cor"+1,"Tamanho"+1, "Modelo Bijuteria"+1,usuarios[0] ));
+	        bijus[1] = (new Bijuteria(2, "Bijuteria"+2,"Marca"+2, 2,"Departamento"+2, "Descrição"+2, "Cor"+2,"Tamanho"+2, "Modelo Bijuteria"+2,usuarios[0]));
 	        
 	        compras[0] = (new Compra(d, "Status"+0, 0, null, null));
 	        compras[1] = (new Compra(d, "Status"+1, 1, null, null));

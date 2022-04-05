@@ -75,17 +75,22 @@ public class DetalheUsuario implements ActionListener {
 		}
 		
 		labelNome.setBounds(30, 20, 150, 25);
-		valorNome.setBounds(130, 20, 230, 25); 
+		valorNome.setBounds(130, 20, 230, 25);
+		
 		labelID.setBounds(30, 50, 150, 25);
 		valorID.setBounds(130, 50, 230, 25);
-		labelCPF.setBounds(30, 110, 150, 25);
-		valorCPF.setBounds(130, 110, 230, 25);
-		labelTelefone.setBounds(30, 140, 150, 25);
-		valorTelefone.setBounds(130, 140, 230, 25);
-		labelPagamento.setBounds(30, 170, 150, 25);
-		valorPagamento.setBounds(130, 170, 230, 25);
-		labelEndereco.setBounds(30, 230, 150, 25);
-		valorEndereco.setBounds(130, 230, 230, 25);	
+		
+		labelCPF.setBounds(30, 80, 150, 25);
+		valorCPF.setBounds(130, 80, 230, 25);
+		
+		labelTelefone.setBounds(30, 110, 150, 25);
+		valorTelefone.setBounds(130, 110, 230, 25);
+		
+		labelEndereco.setBounds(30, 140, 150, 25);
+		valorEndereco.setBounds(130, 140, 230, 60);
+		
+		labelPagamento.setBounds(30, 210, 150, 25);
+		valorPagamento.setBounds(130, 210, 230, 60);	
 		
 		
 		if(op == 2) {

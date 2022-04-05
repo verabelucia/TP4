@@ -17,10 +17,10 @@ public class Endereco {
 	
 	@Override
 	public String toString() {
-		return "\n  CEP - "+ CEP +
-				"\n  Lote - " + lote +
-				"\n  Nome da rua/avenida - " + nomeRuaAvenida +
-				"\n  Complemento - " + complemento ;
+		return "\n  CEP: "+ CEP +
+				"\n  Lote: " + lote +
+				"\n  Nome rua/avenida: " + nomeRuaAvenida +
+				"\n  Complemento: " + complemento ;
 	}
 	
 	

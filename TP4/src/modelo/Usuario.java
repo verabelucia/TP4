@@ -22,6 +22,10 @@ public class Usuario {
 		this.pagamento = pagamento;
 		this.endereco = endereco;
 		//this.fotoPerfil = fotoPerfil;
+		
+		
+		
+		
 	}
 	
 	public String toString() {	
