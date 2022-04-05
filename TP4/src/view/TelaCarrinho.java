@@ -23,18 +23,13 @@ public class TelaCarrinho //implements ActionListener, ListSelectionListener
 	private JLabel titulo;
 	private JButton atualizar;
 	private JButton compra;
-	//private JButton busca;
-	//private JTextField nomeBusca;
 	private static ControleDados dados;
-//	private JList<String> listaBlusaCadastradas;
-//	private String[] listaCodigos = new String[10];
 	
 	public void mostrarDados(ControleDados d, int op) {
 		dados = d;
 		
-		if(op == 5) {
-			//listaCodigos = new ControleCarrinho(dados).getNome();
-			//listaBlusaCadastradas = new JList<String>(listaCodigos);
+		if(op == 3) {
+
 			janela = new JFrame("Carrinho");
 			titulo = new JLabel("Itens carrinho");
 			
@@ -44,31 +39,21 @@ public class TelaCarrinho //implements ActionListener, ListSelectionListener
 			
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
-			//listaBlusaCadastradas.setBounds(20, 50, 350, 120);
-			//listaBlusaCadastradas.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-			//listaBlusaCadastradas.setVisibleRowCount(10);
 
 			atualizar.setBounds(70, 190, 100, 30);
 			compra.setBounds(200, 190, 100, 30);
 			
-			
 			janela.setLayout(null);
 
 			janela.add(titulo);
-			//janela.add(listaBlusaCadastradas);
 			janela.add(atualizar);
 			janela.add(compra);
-			//janela.add(nomeBusca);
-			//janela.add(busca);
 			
 			janela.setSize(400, 320);
 			janela.setLocationRelativeTo(null);
 			janela.setVisible(true);
 			
-			//edita.addActionListener(this);
-			//compra.addActionListener(this);
-			//busca.addActionListener(this);
-			//listaBlusaCadastradas.addListSelectionListener(this);
+		
 		}else {
 
 			JOptionPane.showMessageDialog(null, "Opção inválida!", null, JOptionPane.ERROR_MESSAGE);

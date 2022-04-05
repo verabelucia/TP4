@@ -117,8 +117,6 @@ public class TelaBlusa implements ActionListener, ListSelectionListener{
 		
 	}
 	
-
-	
 	public void valueChanged(ListSelectionEvent e) {
 		Object src = e.getSource();
 		if (e.getValueIsAdjusting() && src == listaBlusaCadastradas) {

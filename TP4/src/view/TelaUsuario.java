@@ -32,7 +32,7 @@ public class TelaUsuario implements ActionListener, ListSelectionListener{
 	public void mostrarDados(ControleDados d, int op) {
 		dados = d;
 		
-		if(op == 4) {
+		if(op == 1) {
 			listaCodigos = new ControleUsuarios(dados).getNome();
 			listaUsuariosCadastrados = new JList<String>(listaCodigos);
 			janela = new JFrame("Usuários");

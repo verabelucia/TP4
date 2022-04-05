@@ -32,7 +32,7 @@ public class TelaCompra //implements ActionListener, ListSelectionListener
 	public void mostrarDados(ControleDados d, int op) {
 		dados = d;
 		
-		if(op == 6) {
+		if(op == 4) {
 			//listaCodigos = new ControleCarrinho(dados).getNome();
 			//listaBlusaCadastradas = new JList<String>(listaCodigos);
 			janela = new JFrame("Compras");
