@@ -1,71 +1,47 @@
 package modelo;
 
+import modelo.*;
+
+import java.util.Random;
+
 public class Carrinho {
-	private double frete = 30.0; //frete fixo
+	private double frete; //frete fixo
+	private Produto item;
+	private double valorCada;
 	private double valorTotal;
+	private int idVendedor;
 	
-	//preço
-	private Blusa blusa;
-	private Calca calca;
-	private Bijuteria bijuteria;
 	
-	public Carrinho(Blusa blusa, Calca calca, Bijuteria bijuteria) {
-		this.blusa = blusa;
-		this.calca = calca;
-		this.bijuteria = bijuteria;
+	
+	public Carrinho(Produto item) {
+		this.item = item;
+		
+		Random random = new Random();
+		frete = 10.1*(random. nextInt(3));
+		valorCada = item.getPreco();
+		valorTotal = valorCada + frete;
+		idVendedor = item.usuario.getIdUsuario();
+		
 	}
 	
 	public String toString() {
 		return 	" --------- Carrinho ------------" +
 				resumirProdutos() +
-				"\nPreço do(s) produto(s): "+ somarValores() +
-				"\nFrete: R$ 30 reais"+
-				"\n\n    Valor total: " + getValorTotal(); 	
+				"\nPreço do(s) produto(s): "+ valorCada +
+				"\nFrete: R$ "+ frete + " reais" +
+				"\n\n    Valor total: " + valorTotal; 	
 	}
 	
 	//------------------ metodos ----------------
+	
 	public String resumirProdutos() {
-		String resumo = "";
-		if (blusa!= null) {
-			resumo += "\nBlusa\nNome: "+blusa.nome+"\n1x "+blusa.preco+ "\ntam: "+blusa.tamanho+"\n";
-		}
-		if (calca!= null) {
-			resumo += "\nCalça\nNome: "+calca.nome+"\n1x "+calca.preco+ "\ntam: "+calca.tamanho+"\n";
-		} 
-		if (bijuteria!= null) {
-			resumo += "\nBijuteria\nNome: "+bijuteria.nome+"\n1x "+bijuteria.preco+ "\ntam: "+bijuteria.tamanho+"\n";
-		}
+		String resumo = "\nItens:\n\tNome: "+item.nome+"\n\t1x "+item.preco+ "\n\ttam: "+item.tamanho+"\n"; //categoria
 		return resumo;
 	}
 	
-	public double somarValores() {
-		double valor = 0;
-		valor += blusa.preco;
-		valor += calca.preco;
-		valor += bijuteria.preco;
-		return valor;
-	}
-	
-	public String datarVendedor() {
-		int id = blusa.usuario.getIdUsuario();
-		String nome = blusa.usuario.getNome();
-		return id + " - " + nome;
-	}
-	
-	public void comprar() {
-	}
-	
-	public void deletarItem() {
-	}
-	
-	
-	
-
 	
 	// -----------gets e sets ------------
 	
-	
-
 	public double getFrete() {
 		return frete;
 	}
@@ -75,36 +51,40 @@ public class Carrinho {
 	}
 
 	public double getValorTotal() {
-		return valorTotal = somarValores() + frete;
+		return valorTotal;
 	}
 
 	public void setValorTotal(double valorTotal) {
 		this.valorTotal = valorTotal;
 	}
 
-	public Blusa getBlusa() {
-		return blusa;
+	public Produto getItem() {
+		return item;
 	}
 
-	public void setBlusa(Blusa blusa) {
-		this.blusa = blusa;
+	public void setItem(Produto item) {
+		this.item = item;
 	}
 
-	public Calca getCalca() {
-		return calca;
+	public double getValorCada() {
+		return valorCada;
 	}
 
-	public void setCalca(Calca calca) {
-		this.calca = calca;
+	public void setValorCada(double valorCada) {
+		this.valorCada = valorCada;
 	}
 
-	public Bijuteria getBijuteria() {
-		return bijuteria;
+	public int getIdVendedor() {
+		return idVendedor;
 	}
 
-	public void setBijuteria(Bijuteria bijuteria) {
-		this.bijuteria = bijuteria;
+	public void setIdVendedor(int idVendedor) {
+		this.idVendedor = idVendedor;
 	}
+	
+	
+
+	
 	
 
 

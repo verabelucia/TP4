@@ -160,9 +160,7 @@ public class ControleDados {
 	
 	public boolean inserirEditarCarrinho(String[] dadosCarrinho) {
 	        
-		Carrinho p = new Carrinho(null, //blusa
-	        						  null, //calça
-	        						  null); //bijuteria
+		Carrinho p = new Carrinho(null); //produto
 	        d.inserirEditarCarrinho(p, 0);
 	        return true; 
 	    }
@@ -220,8 +218,8 @@ public class ControleDados {
 		public Carrinho[] getCarrs() {
 			return this.d.getCarrs();
 		}
-		public int getQtdCarrs() {
-			return this.d.getQtdCarrs();
+		public int getQtdItensCarrs() {
+			return this.d.getQtdItensCarrs();
 		}
 		
 		public Compra[] getCompras() {

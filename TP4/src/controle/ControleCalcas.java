@@ -12,7 +12,7 @@ public class ControleCalcas {
 	
 	public ControleCalcas(ControleDados d) {
 		calc = d.getCalcas();
-		qtdCalca = d.getQtdBlusas();
+		qtdCalca = d.getQtdCalcas();
 	}
 	
 	public String[] getNome() {

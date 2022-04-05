@@ -14,7 +14,7 @@ public class Dados {
 	private Calca[] calcas = new Calca[15];
 	private int qtdCalcas = 0;
 	private Carrinho[] carrs = new Carrinho[15];
-	private int qtdCarrs = 0;
+	private int qtdItensCarrs = 0;
 	private Compra[] compras = new Compra[15];
 	private int qtdCompras = 0;
 	private  Telefone[] tels = new Telefone[15];
@@ -53,8 +53,8 @@ public class Dados {
 	
 	public void inserirEditarCarrinho(Carrinho c, int posicao) {
 		this.carrs[posicao] = c;
-		if (posicao == qtdCarrs)
-			qtdCarrs++;
+		if (posicao == qtdItensCarrs)
+			qtdItensCarrs++;
 	}
 	
 	public void inserirEditarCompra(Compra c, int posicao) {
@@ -125,14 +125,15 @@ public class Dados {
 	        compras[0] = (new Compra(d, "Status"+0, 0, null, null));
 	        compras[1] = (new Compra(d, "Status"+1, 1, null, null));
 	        
-	        carrs[0]= (new Carrinho(null,null,null));
-	        carrs[1]= (new Carrinho(null,null,null));
+	        //carrs[0]= (new Carrinho(null)); dando erro
+	        //carrs[1]= (new Carrinho(null));
 
 	        qtdBijus = 2;
 	        qtdUsuarios = 2;
 	        qtdCalcas = 2;
 	        qtdBlusas = 2;
 	        qtdCompras = 2;
+	        qtdItensCarrs = 2;
 	    }
 
 	
@@ -209,12 +210,12 @@ public class Dados {
 		this.carrs = carrs;
 	}
 
-	public int getQtdCarrs() {
-		return qtdCarrs;
+	public int getQtdItensCarrs() {
+		return qtdItensCarrs;
 	}
 
-	public void setQtdCarrs(int qtdCarrs) {
-		this.qtdCarrs = qtdCarrs;
+	public void setQtdItensCarrs(int qtdCarrs) {
+		this.qtdItensCarrs = qtdCarrs;
 	}
 
 	public Compra[] getCompras() {

@@ -1,10 +1,12 @@
 package modelo;
+
 import java.util.Calendar;
 import java.util.Date;
 
 
 
 public class Compra {
+	
 	private Date dataCompra;
 	private String statusCompra;
 	private int numeroPedido;
@@ -26,17 +28,17 @@ public class Compra {
 	public String toString() {
 		Date dataCompra = Calendar.getInstance().getTime();
 		return 	" ------------ Compra ------------------" +
-				"\nNúmero Pedido: " + numeroPedido + 
-				"\n\nData da Compra: " + dataCompra +
-				"\nStatus: " + statusCompra +
-				
-				"\n\nVendedor: " + carrinho.datarVendedor() +
-				"\nCliente: " + usuario.getIdUsuario() + " - " + usuario.getNome() + "\n\n" +
-				
-				carrinho.resumirProdutos() +
-				"\nPreço do(s) produto(s): "+ carrinho.somarValores() +
-				"\nFrete: R$ 30 reais"+
-				"\n\n    Valor total: " + carrinho.getValorTotal(); 	
+		"\nNúmero Pedido: " + numeroPedido + 
+		"\n\nData da Compra: " + dataCompra +
+		"\nStatus: " + statusCompra +
+		
+		"\n\nID Vendedor: " + carrinho.getIdVendedor() +
+		"\nID Cliente: " + usuario.getIdUsuario() + "\n" +
+		
+		carrinho.resumirProdutos() +
+		"\nPreço do produto: "+ carrinho.getValorCada() +
+		"\nFrete: R$ "+ carrinho.getFrete() + " reais" +
+		"\n\n    Valor total: " + carrinho.getValorTotal(); 	
 	}
 				
 	//------------------------ metodos -----------------------

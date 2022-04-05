@@ -59,7 +59,8 @@ public class Teste {
 	
 	//ADICIONANDO PRODUTO AO CARRINHO
 		
-		Carrinho cr1 = new Carrinho(b1,c1,bj1);
+		//Carrinho cr1 = new Carrinho(b1,c1,bj1);
+		Carrinho cr1 = new Carrinho(b1);
 		
 		//System.out.println(cr1.valorProdutos()+"\n");
 		System.out.println(cr1.toString()+"\n");

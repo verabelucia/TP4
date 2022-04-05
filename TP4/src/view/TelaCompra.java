@@ -21,7 +21,7 @@ public class TelaCompra //implements ActionListener, ListSelectionListener
 	
 	private JFrame janela;
 	private JLabel titulo;
-	//private JButton atualizar;
+	private JButton atualiza;
 	//private JButton compra;
 	private JButton busca;
 	private JTextField numeroBusca;
@@ -39,18 +39,21 @@ public class TelaCompra //implements ActionListener, ListSelectionListener
 			titulo = new JLabel("Consultar compras");
 			
 			numeroBusca = new JTextField();
-			busca = new JButton("Atualizar");
+			busca = new JButton("Pesquisar");
+			atualiza = new JButton("Atualizar");
 			//compra = new JButton("Comprar");
 
 			
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
+		
 			//listaBlusaCadastradas.setBounds(20, 50, 350, 120);
 			//listaBlusaCadastradas.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 			//listaBlusaCadastradas.setVisibleRowCount(10);
 
 			numeroBusca.setBounds(20, 240, 230, 30);
 			busca.setBounds(270, 240, 100, 30);
+			atualiza.setBounds(150, 190, 100, 30);
 			
 			
 			janela.setLayout(null);
@@ -59,6 +62,7 @@ public class TelaCompra //implements ActionListener, ListSelectionListener
 			//janela.add(listaBlusaCadastradas);
 			janela.add(numeroBusca);
 			janela.add(busca);
+			janela.add(atualiza);
 			//janela.add(nomeBusca);
 			//janela.add(busca);
 			
